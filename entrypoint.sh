@@ -5,7 +5,8 @@ while read file
 do
   base_name=$( echo "${file}" | basename "${file}" | sed -e 's/\.md//g')
   pandoc -f markdown ${file} -o ${PDF_DIR}/${base_name}.pdf
-  ls -Rhl
+  git status
+  git diff
 done < filelist.dat
 
 rm filelist.dat
