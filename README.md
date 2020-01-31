@@ -1,6 +1,12 @@
 # Markdown to PDF Action	
 
-This action will find any markdown, .md, files and generate a .pdf file for each one. This action can be used in conjunction with a commit action to add the generated .pdf back to the repository. The example shows how to 1) checkout the code, 2) convert all markdown files (.md) to .pdfs, and 3) open a PR back to the repo with the generated .pdfs. This action uses the [pandoc](https://pandoc.org/) library installed on Ubuntu.
+This action will find any markdown, .md, files and generate a .pdf file for each one. This action can be used in conjunction with a commit action to add the generated .pdf back to the repository. The example shows how to...
+
+1. Checkout the code 
+2. Convert all markdown files (.md) to .pdfs, **Note:** You can filter the paths to only run on certain file types.
+3. Open a PR back to the repo with the generated .pdfs. 
+
+This action uses the [pandoc](https://pandoc.org/) library installed on Ubuntu.
 
 ## Example
 ```
