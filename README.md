@@ -9,7 +9,7 @@ This action will find any markdown, .md, files and generate a .pdf file for each
 This action uses the [pandoc](https://pandoc.org/) library installed on Ubuntu.
 
 ## Example
-```
+```yaml
 name: Convert PDF to Markdown
 
 on:
