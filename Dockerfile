@@ -5,7 +5,7 @@ LABEL "com.github.actions.description"="Create PDF files from Markdown."
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update
-run apt-get -yfv install texlive-latex-base texlive-latex-extra texlive-latex-recommended
+run apt-get -yfv install texlive-base texlive-latex-base texlive-latex-extra texlive-latex-recommended
 RUN apt-get -yfv install pandoc
 RUN tlmgr install pdftexcmds
 
