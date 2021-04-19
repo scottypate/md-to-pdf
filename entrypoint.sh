@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
-find . -name '*.md' > filelist.dat
 
-while read file
-do
-  base_name=$( echo "${file}" | basename "${file}" | sed -e 's/\.md//g')
-  pandoc -f markdown ${file} -o ${PDF_DIR}/${base_name}.pdf
-  git status
-  git diff
-done < filelist.dat
-
-rm filelist.dat
+- find . -name '*.md' -exec sh -c 'pandoc $0 -f markdown -t docx -o $0.docx' {} \;
+- find . -name '*.md' -exec sh -c 'kramdown $0 --output pdf > $0.pdf' {} \;
+ls
